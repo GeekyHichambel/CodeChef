@@ -8,20 +8,9 @@ int main() {
     {
         int XX,YY,ZZ;
         cin >> XX >> YY >>ZZ;
-        if (XX>=YY&&XX<ZZ)
-        {
-            cout << "PIZZA" <<endl ;
-        }
-        else{ 
-            if (XX>=ZZ&&XX<YY)
-        {
-            cout << "BROWNIE"<<endl;
-        }
-        else 
-        {
-            cout  << "NOTHING"<<endl;
-        }
+        string str;
+        str = (XX-YY>=0)?(str="PIZZA"):(XX-ZZ>=0)?(str="BROWNIE"):(str="NOTHING");
+        cout << str <<endl;
      }
-    }
 	return 0;
 }
