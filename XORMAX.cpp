@@ -2,15 +2,10 @@
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long int
-int main() {
-	int t;
-	cin >> t;
-	while(t--){
-	    string a,b;
-	    cin >> a;ll count1_a=0;
-	    cin >> b;ll count1_b=0;
-	    ll len=a.length();
-	    for (ll i=0;i<len;i++){
+
+string solve(string a,string b,ll len){
+    ll count1_a=0;ll count1_b=0;
+    for (ll i=0;i<len;i++){
 	        if (a[i]=='1'){
 	            count1_a++;
 	        }
@@ -29,6 +24,17 @@ int main() {
 	    for (int i=fin_count;i<len;i++){
 	        ans+='0';
 	    }
+	    return ans;
+}
+int main() {
+	int t;
+	cin >> t;
+	while(t--){
+	    string a,b;
+	    cin >> a;
+	    cin >> b;
+	    ll n=a.length();
+	    string ans=solve(a,b,n);
 	    cout << ans << endl;
 	}
 	return 0;
